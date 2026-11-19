@@ -1,0 +1,17 @@
+# Render Blueprint for the public API (FastAPI). New > Blueprint > pick this repo.
+# The database is Neon and the daily refresh runs in GitHub Actions, so this is the only Render service.
+services:
+  - type: web
+    name: risefirst-api
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL      # Neon connection string (postgresql://...?sslmode=require)
+        sync: false
+      - key: CORS_ORIGINS      # e.g. ["https://risefirst.vercel.app"]
+        sync: false

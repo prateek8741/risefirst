@@ -1,0 +1,21 @@
+# Render's free tier sleeps after 15 idle minutes, and the first visit then waits ~50 s.
+# A ping every 10 minutes keeps it awake (one service fits in the free 750 hours/month).
+# Set the repository variable API_URL (e.g. https://risefirst-api.onrender.com) to turn it on.
+name: Keep API awake
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  ping:
+    if: vars.API_URL != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - run: curl -fsS --retry 2 --max-time 90 "$API_URL/api/health"
+        env:
+          API_URL: ${{ vars.API_URL }}

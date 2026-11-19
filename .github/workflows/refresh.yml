@@ -1,0 +1,43 @@
+# Daily refresh: fetch every board, classify, tag with Gemini, write to the hosted database.
+# Secrets: DATABASE_URL, GEMINI_API_KEY. Optional variables: GEMINI_MODEL, AI_CALL_BUDGET.
+name: Daily refresh
+
+on:
+  schedule:
+    - cron: "30 0 * * *"  # 06:00 IST
+  workflow_dispatch:
+    inputs:
+      no_ai:
+        description: "Rules only (skip Gemini)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120  # free-tier Gemini is paced at 5 calls/min
+    defaults:
+      run:
+        working-directory: backend
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3.5-flash-lite' }}
+      AI_CALL_BUDGET: ${{ vars.AI_CALL_BUDGET || '300' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.11.7"
+      - run: uv sync --frozen --no-dev
+      - run: uv run --no-dev risefirst migrate
+      - name: Ingest
+        run: uv run --no-dev risefirst ingest ${{ inputs.no_ai && '--no-ai' || '' }}
+      - run: uv run --no-dev risefirst stats

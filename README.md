@@ -59,6 +59,24 @@ npm run dev                              # http://localhost:3000, expects the AP
 
 Configuration comes from environment variables or `backend/.env`. See `.env.example`.
 
+## Hosted deployment (free tier)
+
+```
+Vercel (Next.js, sin1) ──► Render (FastAPI, Singapore) ──► Neon (Postgres, Singapore)
+                                                              ▲
+                     GitHub Actions, daily 06:00 IST: risefirst migrate + ingest
+```
+
+| Piece | Service | Config in this repo |
+|---|---|---|
+| Database | Neon | none: set `DATABASE_URL` to Neon's connection string, which is accepted as-is (`postgresql://…?sslmode=require`) |
+| API | Render web service (Docker) | [render.yaml](render.yaml). Set `DATABASE_URL` and `CORS_ORIGINS` in Render |
+| Website | Vercel, root directory `web` | [web/vercel.json](web/vercel.json). Set `API_URL` to the Render URL |
+| Daily refresh | GitHub Actions | [.github/workflows/refresh.yml](.github/workflows/refresh.yml). Secrets `DATABASE_URL`, `GEMINI_API_KEY` |
+| Keep the API awake | GitHub Actions | [.github/workflows/keepalive.yml](.github/workflows/keepalive.yml). Variable `API_URL` |
+
+The API runs migrations on start. A refresh can also be started from the Actions tab ("Run workflow").
+
 ### CLI
 
 | Command | Does |
