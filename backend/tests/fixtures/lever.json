@@ -1,0 +1,6 @@
+[{"id": "abc-123", "text": "Business Analyst Intern",
+  "categories": {"location": "Mumbai", "allLocations": ["Mumbai", "Pune"], "commitment": "Intern"},
+  "descriptionPlain": "Work with the ops team.",
+  "lists": [{"text": "Requirements", "content": "<li>0-1 years of experience</li><li>Excel</li>"}],
+  "additionalPlain": "", "hostedUrl": "https://jobs.lever.co/acme/abc-123", "createdAt": 1762000000000,
+  "workplaceType": "hybrid"}]

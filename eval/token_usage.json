@@ -1,0 +1,348 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "count_tokens": [
+  {
+   "id": 28,
+   "prompt_tokens": 588,
+   "desc_chars": 2818
+  },
+  {
+   "id": 72,
+   "prompt_tokens": 700,
+   "desc_chars": 3732
+  },
+  {
+   "id": 224,
+   "prompt_tokens": 591,
+   "desc_chars": 2682
+  },
+  {
+   "id": 281,
+   "prompt_tokens": 1060,
+   "desc_chars": 4839
+  },
+  {
+   "id": 295,
+   "prompt_tokens": 1151,
+   "desc_chars": 5517
+  },
+  {
+   "id": 351,
+   "prompt_tokens": 1126,
+   "desc_chars": 5929
+  },
+  {
+   "id": 385,
+   "prompt_tokens": 1113,
+   "desc_chars": 11483
+  },
+  {
+   "id": 467,
+   "prompt_tokens": 705,
+   "desc_chars": 3586
+  },
+  {
+   "id": 523,
+   "prompt_tokens": 615,
+   "desc_chars": 3046
+  },
+  {
+   "id": 1139,
+   "prompt_tokens": 1162,
+   "desc_chars": 5719
+  },
+  {
+   "id": 1434,
+   "prompt_tokens": 778,
+   "desc_chars": 3862
+  },
+  {
+   "id": 1951,
+   "prompt_tokens": 585,
+   "desc_chars": 2710
+  },
+  {
+   "id": 14,
+   "prompt_tokens": 459,
+   "desc_chars": 1981
+  },
+  {
+   "id": 26,
+   "prompt_tokens": 953,
+   "desc_chars": 4323
+  },
+  {
+   "id": 45,
+   "prompt_tokens": 423,
+   "desc_chars": 1998
+  },
+  {
+   "id": 65,
+   "prompt_tokens": 289,
+   "desc_chars": 1358
+  },
+  {
+   "id": 69,
+   "prompt_tokens": 220,
+   "desc_chars": 1038
+  },
+  {
+   "id": 144,
+   "prompt_tokens": 406,
+   "desc_chars": 1966
+  },
+  {
+   "id": 227,
+   "prompt_tokens": 441,
+   "desc_chars": 2124
+  },
+  {
+   "id": 236,
+   "prompt_tokens": 302,
+   "desc_chars": 1161
+  },
+  {
+   "id": 18,
+   "prompt_tokens": 1203,
+   "desc_chars": 5868
+  },
+  {
+   "id": 34,
+   "prompt_tokens": 644,
+   "desc_chars": 2763
+  },
+  {
+   "id": 55,
+   "prompt_tokens": 634,
+   "desc_chars": 2838
+  },
+  {
+   "id": 112,
+   "prompt_tokens": 975,
+   "desc_chars": 5035
+  },
+  {
+   "id": 203,
+   "prompt_tokens": 606,
+   "desc_chars": 2924
+  },
+  {
+   "id": 309,
+   "prompt_tokens": 1151,
+   "desc_chars": 5500
+  },
+  {
+   "id": 347,
+   "prompt_tokens": 1133,
+   "desc_chars": 5985
+  },
+  {
+   "id": 349,
+   "prompt_tokens": 1212,
+   "desc_chars": 6292
+  },
+  {
+   "id": 36,
+   "prompt_tokens": 493,
+   "desc_chars": 2054
+  },
+  {
+   "id": 39,
+   "prompt_tokens": 534,
+   "desc_chars": 2411
+  },
+  {
+   "id": 138,
+   "prompt_tokens": 412,
+   "desc_chars": 2200
+  },
+  {
+   "id": 159,
+   "prompt_tokens": 586,
+   "desc_chars": 3000
+  },
+  {
+   "id": 360,
+   "prompt_tokens": 1111,
+   "desc_chars": 6495
+  },
+  {
+   "id": 378,
+   "prompt_tokens": 997,
+   "desc_chars": 5033
+  },
+  {
+   "id": 1639,
+   "prompt_tokens": 699,
+   "desc_chars": 2888
+  },
+  {
+   "id": 9,
+   "prompt_tokens": 597,
+   "desc_chars": 2731
+  },
+  {
+   "id": 167,
+   "prompt_tokens": 743,
+   "desc_chars": 3916
+  },
+  {
+   "id": 252,
+   "prompt_tokens": 640,
+   "desc_chars": 3039
+  },
+  {
+   "id": 399,
+   "prompt_tokens": 1193,
+   "desc_chars": 8671
+  },
+  {
+   "id": 572,
+   "prompt_tokens": 910,
+   "desc_chars": 4710
+  },
+  {
+   "id": 582,
+   "prompt_tokens": 1218,
+   "desc_chars": 6553
+  },
+  {
+   "id": 606,
+   "prompt_tokens": 939,
+   "desc_chars": 4680
+  },
+  {
+   "id": 710,
+   "prompt_tokens": 1204,
+   "desc_chars": 7931
+  },
+  {
+   "id": 810,
+   "prompt_tokens": 593,
+   "desc_chars": 3116
+  },
+  {
+   "id": 838,
+   "prompt_tokens": 1221,
+   "desc_chars": 8703
+  },
+  {
+   "id": 1100,
+   "prompt_tokens": 1098,
+   "desc_chars": 5351
+  },
+  {
+   "id": 1134,
+   "prompt_tokens": 1224,
+   "desc_chars": 7522
+  },
+  {
+   "id": 1336,
+   "prompt_tokens": 1130,
+   "desc_chars": 7246
+  },
+  {
+   "id": 1358,
+   "prompt_tokens": 1171,
+   "desc_chars": 7944
+  },
+  {
+   "id": 1473,
+   "prompt_tokens": 1159,
+   "desc_chars": 6791
+  }
+ ],
+ "calls": [
+  {
+   "id": 28,
+   "latency_s": 7.65,
+   "prompt_tokens": 821,
+   "output_tokens": 160,
+   "thinking_tokens": null,
+   "total_tokens": 981,
+   "response": "{\n  \"category\": \"Customer Support\",\n  \"skills\": [\n    \"Customer Success\",\n    \"Client Onboarding\",\n    \"CRM\",\n    \"Digital Marketing\",\n    \"WhatsApp Business\",\n    \"SaaS\",\n    \"Account Management\",\n    \"Product Support\"\n  ],\n  \"employment_type\": \"full_time\",\n  \"work_mode\": \"onsite\",\n  \"experience_min\": 1,\n  \"experience_max\": null,\n  \"fresher_friendly\": false,\n  \"confidence\": 0.9,\n  \"summary\": \"Manage client onboarding, product setup, demos, and adoption of Paytm solutions while collaborating with internal teams to resolve issues.\"\n}"
+  },
+  {
+   "id": 351,
+   "latency_s": 7.27,
+   "prompt_tokens": 1359,
+   "output_tokens": 135,
+   "thinking_tokens": null,
+   "total_tokens": 1494,
+   "response": "{\n  \"category\": \"Software Engineering\",\n  \"skills\": [\n    \"Agile\",\n    \"SDLC\",\n    \"AWS\",\n    \"Azure\",\n    \"GCP\"\n  ],\n  \"employment_type\": \"internship\",\n  \"work_mode\": \"onsite\",\n  \"experience_min\": 0,\n  \"experience_max\": 0,\n  \"fresher_friendly\": true,\n  \"confidence\": 1.0,\n  \"summary\": \"Assist in planning, managing, and executing technical programs and product delivery for the engineering organisation.\"\n}"
+  },
+  {
+   "id": 1434,
+   "latency_s": 7.73,
+   "prompt_tokens": 1011,
+   "output_tokens": 143,
+   "thinking_tokens": null,
+   "total_tokens": 1154,
+   "response": "{\n  \"category\": \"Sales & Marketing\",\n  \"skills\": [\n    \"Content Writing\",\n    \"Social Media\",\n    \"Video Editing\",\n    \"Figma\",\n    \"Canva\",\n    \"SEO\"\n  ],\n  \"employment_type\": \"internship\",\n  \"work_mode\": \"unknown\",\n  \"experience_min\": 0,\n  \"experience_max\": 1,\n  \"fresher_friendly\": true,\n  \"confidence\": 1.0,\n  \"summary\": \"Drive marketing storytelling, content creation, social media management, and creator partnerships for an AI platform.\"\n}"
+  },
+  {
+   "id": 65,
+   "latency_s": 8.29,
+   "prompt_tokens": 522,
+   "output_tokens": 135,
+   "thinking_tokens": null,
+   "total_tokens": 657,
+   "response": "{\n  \"category\": \"Sales & Marketing\",\n  \"skills\": [\n    \"CleverTap\",\n    \"Campaign Management\",\n    \"Data Analysis\",\n    \"Logical Reasoning\"\n  ],\n  \"employment_type\": \"full_time\",\n  \"work_mode\": \"unknown\",\n  \"experience_min\": 0,\n  \"experience_max\": 1,\n  \"fresher_friendly\": true,\n  \"confidence\": 0.85,\n  \"summary\": \"Manage marketing campaign operations, monitor performance metrics, and execute experiments to improve efficiency and reduce errors.\"\n}"
+  },
+  {
+   "id": 18,
+   "latency_s": 11.59,
+   "prompt_tokens": 1436,
+   "output_tokens": 158,
+   "thinking_tokens": null,
+   "total_tokens": 1594,
+   "response": "{\n  \"category\": \"Data & AI\",\n  \"skills\": [\n    \"SQL\",\n    \"Python\",\n    \"Excel\",\n    \"Tableau\",\n    \"Power BI\",\n    \"Google Analytics\",\n    \"Mixpanel\",\n    \"Amplitude\"\n  ],\n  \"employment_type\": \"full_time\",\n  \"work_mode\": \"unknown\",\n  \"experience_min\": 5,\n  \"experience_max\": 7,\n  \"fresher_friendly\": false,\n  \"confidence\": 1.0,\n  \"summary\": \"Drive data-led growth, customer lifecycle analytics, and business insights for the Paytm Gold portfolio using advanced analytics and SQL.\"\n}"
+  },
+  {
+   "id": 309,
+   "latency_s": 11.96,
+   "prompt_tokens": 1384,
+   "output_tokens": 157,
+   "thinking_tokens": null,
+   "total_tokens": 1541,
+   "response": "{\n  \"category\": \"HR & Recruiting\",\n  \"skills\": [\n    \"Employer Branding\",\n    \"Internal Communications\",\n    \"Employee Engagement\",\n    \"Content Strategy\",\n    \"Team Management\",\n    \"Event Management\",\n    \"AI Workflows\"\n  ],\n  \"employment_type\": \"full_time\",\n  \"work_mode\": \"onsite\",\n  \"experience_min\": 10,\n  \"experience_max\": null,\n  \"fresher_friendly\": false,\n  \"confidence\": 1.0,\n  \"summary\": \"Manage employer branding, internal communications, employee engagement, and lead a team to shape Zeta's brand and culture.\"\n}"
+  },
+  {
+   "id": 138,
+   "latency_s": 7.74,
+   "prompt_tokens": 645,
+   "output_tokens": 125,
+   "thinking_tokens": null,
+   "total_tokens": 770,
+   "response": "{\n  \"category\": \"Sales & Marketing\",\n  \"skills\": [\"Direct Sales\", \"Field Sales\", \"Lead Generation\", \"Relationship Management\", \"Communication\"],\n  \"employment_type\": \"full_time\",\n  \"work_mode\": \"onsite\",\n  \"experience_min\": 1,\n  \"experience_max\": null,\n  \"fresher_friendly\": false,\n  \"confidence\": 0.95,\n  \"summary\": \"Drive direct field sales of health insurance products to merchants and open-market customers in Delhi NCR.\"\n}"
+  },
+  {
+   "id": 9,
+   "latency_s": 9.3,
+   "prompt_tokens": 830,
+   "output_tokens": 131,
+   "thinking_tokens": null,
+   "total_tokens": 961,
+   "response": "{\n  \"category\": \"Operations\",\n  \"skills\": [\n    \"People Management\",\n    \"Negotiation\",\n    \"Leadership\",\n    \"Communication\",\n    \"Computers\"\n  ],\n  \"employment_type\": \"full_time\",\n  \"work_mode\": \"onsite\",\n  \"experience_min\": 8,\n  \"experience_max\": null,\n  \"fresher_friendly\": false,\n  \"confidence\": 1.0,\n  \"summary\": \"Manage area collection targets, oversee team productivity, and handle lending collections operations.\"\n}"
+  },
+  {
+   "id": 582,
+   "latency_s": 6.87,
+   "prompt_tokens": 1451,
+   "output_tokens": 158,
+   "thinking_tokens": null,
+   "total_tokens": 1609,
+   "response": "{\n  \"category\": \"Software Engineering\",\n  \"skills\": [\n    \"Python\",\n    \"Java\",\n    \"SQL\",\n    \"Machine Learning\",\n    \"Generative AI\",\n    \"Cloud Platforms\",\n    \"Data Pipelines\",\n    \"APIs\"\n  ],\n  \"employment_type\": \"full_time\",\n  \"work_mode\": \"remote\",\n  \"experience_min\": 7,\n  \"experience_max\": null,\n  \"fresher_friendly\": false,\n  \"confidence\": 1,\n  \"summary\": \"Own the technical and product direction of strategic AI engagements, bridging customer business problems with Databricks solutions from discovery to production launch.\"\n}"
+  },
+  {
+   "id": 1100,
+   "latency_s": 8.45,
+   "prompt_tokens": 1331,
+   "output_tokens": 160,
+   "thinking_tokens": null,
+   "total_tokens": 1491,
+   "response": "{\n  \"category\": \"Software Engineering\",\n  \"skills\": [\n    \"Go\",\n    \"C++\",\n    \"Java\",\n    \"Microservices\",\n    \"Kubernetes\",\n    \"Docker\",\n    \"Data Structures\",\n    \"Algorithms\"\n  ],\n  \"employment_type\": \"full_time\",\n  \"work_mode\": \"onsite\",\n  \"experience_min\": 3,\n  \"experience_max\": null,\n  \"fresher_friendly\": false,\n  \"confidence\": 1,\n  \"summary\": \"You will design, develop, and test microservices and distributed systems features for the Portworx product portfolio using Go, C++, or Java.\"\n}"
+  }
+ ],
+ "system_instruction_tokens": 233
+}

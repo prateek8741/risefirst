@@ -1,0 +1,52 @@
+{
+  "per_ats": {
+    "greenhouse": {
+      "boards_with_jobs": 79,
+      "all_postings": 11953,
+      "india_postings": 1046,
+      "REJECTED": 893,
+      "ELIGIBLE": 16,
+      "UNKNOWN": 67,
+      "REVIEW": 70
+    },
+    "ashby": {
+      "boards_with_jobs": 20,
+      "all_postings": 2895,
+      "india_postings": 133,
+      "REVIEW": 12,
+      "REJECTED": 87,
+      "UNKNOWN": 33,
+      "ELIGIBLE": 1
+    },
+    "workable": {
+      "boards_with_jobs": 0
+    },
+    "recruitee": {
+      "boards_with_jobs": 2,
+      "all_postings": 6
+    },
+    "lever": {
+      "boards_with_jobs": 14,
+      "all_postings": 530,
+      "india_postings": 344,
+      "REJECTED": 244,
+      "UNKNOWN": 43,
+      "ELIGIBLE": 22,
+      "REVIEW": 35
+    }
+  },
+  "boards_with_india_jobs": 74,
+  "boards_with_eligible_jobs": 16,
+  "eligible_postings": 39,
+  "eligible_unique_title_location": 39,
+  "eligible_by_domain": {
+    "Software/IT": 10,
+    "Other": 9,
+    "HR": 8,
+    "Sales/Marketing": 4,
+    "Operations": 4,
+    "Finance": 2,
+    "Data/AI": 1,
+    "Product": 1
+  }
+}

@@ -1,0 +1,11 @@
+.env
+backend/.env
+**/__pycache__/
+backend/.venv/
+backend/.pytest_cache/
+backend/.ruff_cache/
+web/node_modules/
+web/.next/
+spikes/sourcing/raw/
+.DS_Store
+~$*

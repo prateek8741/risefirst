@@ -1,0 +1,6 @@
+{"jobs": [
+  {"id": "a1", "title": "Associate Analyst", "location": "India", "secondaryLocations": [],
+   "employmentType": "FullTime", "isRemote": true, "isListed": true, "descriptionPlain": "Freshers welcome.",
+   "jobUrl": "https://jobs.ashbyhq.com/acme/a1", "publishedAt": "2026-11-05T00:00:00Z"},
+  {"id": "a2", "title": "Hidden Role", "location": "India", "isListed": false, "descriptionPlain": "",
+   "jobUrl": "https://jobs.ashbyhq.com/acme/a2"}]}

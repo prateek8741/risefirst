@@ -1,0 +1,90 @@
+# RiseFirst source registry: which employer job boards we collect from.
+#
+# Admission policy (see README "Sources and compliance"):
+#   - Only official, public, keyless job-board APIs the employer publishes through its ATS.
+#   - The host must permit it in robots.txt; rate limits follow robots.txt Crawl-delay.
+#   - No scraping of job portals (LinkedIn, Naukri, Indeed, Internshala, Glassdoor, Foundit).
+#
+# These 74 boards were measured on 2026-11-17 (spikes/sourcing/REPORT.md) to have open
+# jobs in India. Add a board by appending an entry; set enabled: false to pause one.
+
+boards:
+  # --- Lever (api.lever.co, robots.txt Crawl-delay 1) ---
+  - {ats: lever, board: paytm, company: Paytm}
+  - {ats: lever, board: meesho, company: Meesho}
+  - {ats: lever, board: hevodata, company: Hevo Data}
+  - {ats: lever, board: mindtickle, company: Mindtickle}
+  - {ats: lever, board: fampay, company: FamPay}
+  - {ats: lever, board: cred, company: CRED}
+  - {ats: lever, board: zeta, company: Zeta}
+  - {ats: lever, board: nium, company: Nium}
+  - {ats: lever, board: outreach, company: Outreach}
+  - {ats: lever, board: pocketfm, company: Pocket FM}
+
+  # --- Greenhouse (boards-api.greenhouse.io) ---
+  - {ats: greenhouse, board: rubrik, company: Rubrik}
+  - {ats: greenhouse, board: celonis, company: Celonis}
+  - {ats: greenhouse, board: sigmoid, company: Sigmoid}
+  - {ats: greenhouse, board: stripe, company: Stripe}
+  - {ats: greenhouse, board: agoda, company: Agoda}
+  - {ats: greenhouse, board: appian, company: Appian}
+  - {ats: greenhouse, board: groww, company: Groww}
+  - {ats: greenhouse, board: workato, company: Workato}
+  - {ats: greenhouse, board: adyen, company: Adyen}
+  - {ats: greenhouse, board: airbnb, company: Airbnb}
+  - {ats: greenhouse, board: anthropic, company: Anthropic}
+  - {ats: greenhouse, board: cockroachlabs, company: Cockroach Labs}
+  - {ats: greenhouse, board: coinbase, company: Coinbase}
+  - {ats: greenhouse, board: commvault, company: Commvault}
+  - {ats: greenhouse, board: coursera, company: Coursera}
+  - {ats: greenhouse, board: databricks, company: Databricks}
+  - {ats: greenhouse, board: datadog, company: Datadog}
+  - {ats: greenhouse, board: devrev, company: DevRev}
+  - {ats: greenhouse, board: druva, company: Druva}
+  - {ats: greenhouse, board: duolingo, company: Duolingo}
+  - {ats: greenhouse, board: elastic, company: Elastic}
+  - {ats: greenhouse, board: figma, company: Figma}
+  - {ats: greenhouse, board: fivetran, company: Fivetran}
+  - {ats: greenhouse, board: gitlab, company: GitLab}
+  - {ats: greenhouse, board: glance, company: Glance}
+  - {ats: greenhouse, board: grafanalabs, company: Grafana Labs}
+  - {ats: greenhouse, board: harnessinc, company: Harness}
+  - {ats: greenhouse, board: highradius, company: HighRadius}
+  - {ats: greenhouse, board: inmobi, company: InMobi}
+  - {ats: greenhouse, board: mixpanel, company: Mixpanel}
+  - {ats: greenhouse, board: mongodb, company: MongoDB}
+  - {ats: greenhouse, board: neo4j, company: Neo4j}
+  - {ats: greenhouse, board: newrelic, company: New Relic}
+  - {ats: greenhouse, board: observeai, company: Observe.AI}
+  - {ats: greenhouse, board: okta, company: Okta}
+  - {ats: greenhouse, board: purestorage, company: Pure Storage}
+  - {ats: greenhouse, board: razorpaysoftwareprivatelimited, company: Razorpay}
+  - {ats: greenhouse, board: samsara, company: Samsara}
+  - {ats: greenhouse, board: scaleai, company: Scale AI}
+  - {ats: greenhouse, board: singlestore, company: SingleStore}
+  - {ats: greenhouse, board: starburst, company: Starburst}
+  - {ats: greenhouse, board: sumologic, company: Sumo Logic}
+  - {ats: greenhouse, board: toast, company: Toast}
+  - {ats: greenhouse, board: truecaller, company: Truecaller}
+  - {ats: greenhouse, board: turing, company: Turing}
+  - {ats: greenhouse, board: twilio, company: Twilio}
+  - {ats: greenhouse, board: vercel, company: Vercel}
+  - {ats: greenhouse, board: yugabyte, company: Yugabyte}
+  - {ats: greenhouse, board: zenoti, company: Zenoti}
+  - {ats: greenhouse, board: zoominfo, company: ZoomInfo}
+  - {ats: greenhouse, board: zscaler, company: Zscaler}
+
+  # --- Ashby (api.ashbyhq.com, documented public posting API) ---
+  - {ats: ashby, board: sarvam, company: Sarvam AI}
+  - {ats: ashby, board: airwallex, company: Airwallex}
+  - {ats: ashby, board: amplitude, company: Amplitude}
+  - {ats: ashby, board: atlan, company: Atlan}
+  - {ats: ashby, board: clickhouse, company: ClickHouse}
+  - {ats: ashby, board: notion, company: Notion}
+  - {ats: ashby, board: openai, company: OpenAI}
+  - {ats: ashby, board: redis, company: Redis}
+  - {ats: ashby, board: signoz, company: SigNoz}
+  - {ats: ashby, board: snowflake, company: Snowflake}
+  - {ats: ashby, board: spotdraft, company: SpotDraft}
+  - {ats: ashby, board: thoughtworks, company: Thoughtworks}
+  - {ats: ashby, board: uipath, company: UiPath}

@@ -1,0 +1,61 @@
+"""Hand-check verdicts for sample50.json (one entry per row, in sample order).
+
+truth: what the posting text supports, judged against the brief's definition of a fresher
+(0-1 years of experience): FIT = intern/trainee/graduate role, freshers welcome, experience only
+"preferred", or a stated minimum of at most 1 year. NOT = requires 2+ years or substantial
+experience. UNCLEAR = nothing in the text either way (hiding it is the correct outcome).
+Field verdicts: Y = correct, N = wrong, U = left "unknown" although nothing contradicts it, - = not tagged.
+"""
+# n: (truth, category, emp_type, work_mode, location, experience, skills, evidence, note)
+J = {
+ 1: ("FIT","Y","Y","Y","Y","Y","Y","Preferred: 1+ years of experience in Customer Success...","'Preferred', not required"),
+ 2: ("FIT","Y","Y","Y","Y","Y","Y","Pursuing or recently completed a Bachelor's or Master's degree",""),
+ 3: ("FIT","Y","Y","Y","Y","Y","Y","Freshers with experience in software development, ideally with internships",""),
+ 4: ("FIT","Y","Y","Y","Y","Y","Y","People Operations Intern",""),
+ 5: ("FIT","Y","Y","Y","Y","Y","Y","have 1-2 years of experience in data science, analytics","Min 1 year: fits 0-1 definition (borderline on a strict reading)"),
+ 6: ("FIT","N","Y","Y","Y","Y","N","Pursuing a Bachelor's or Master's degree","Category should be Operations (program management), AI said Software Engineering; skill list has a stray ',Azure'"),
+ 7: ("FIT","Y","Y","N","Y","Y","Y","Extensive internship experience or 1-2 years ... flexible hybrid work model","Work mode is hybrid; AI said hybrid but the rules' city=>onsite default won"),
+ 8: ("FIT","Y","Y","Y","Y","Y","-","You are a current student or have recently graduated in 2026",""),
+ 9: ("FIT","N","U","Y","Y","Y","-","Experience: 1 - 2 years as content creator","Category: content/marketing, rules matched 'Finance' in the title"),
+ 10: ("FIT","Y","U","Y","Y","Y","-","A minimum of 1+ years of relevant experience","Borderline on a strict reading"),
+ 11: ("FIT","Y","Y","Y","Y","Y","-","Marketing Intern",""),
+ 12: ("FIT","Y","U","Y","Y","Y","-","1 - 3 years of relevant Machine Learning experience","Borderline on a strict reading"),
+ 13: ("FIT","Y","Y","N","Y","Y","Y","Candidates with experience in field sales... would be relevant","Experience only preferred. Field role tagged remote (board hint)"),
+ 14: ("NOT","Y","Y","Y","Y","N","Y","CleverTap Expertise (Mandatory) - hands-on experience with CleverTap","FALSE POSITIVE: mandatory tool experience means real prior work; AI guessed 0-1 years with no years stated"),
+ 15: ("FIT","Y","Y","Y","Y","Y","Y","Prior experience in education, community outreach... preferred",""),
+ 16: ("FIT","Y","Y","Y","Y","Y","Y","Previous experience in operations is preferred - not mandatory",""),
+ 17: ("FIT","Y","Y","Y","Y","Y","Y","Prior experience in handling employee queries... will be an advantage",""),
+ 18: ("FIT","Y","Y","Y","Y","N","Y","(6) months - 2 years of experience in insurance sales","Decision right; stored experience '2+' is the rules parser misreading 'months - 2 years'"),
+ 19: ("UNCLEAR","Y","Y","Y","Y","Y","Y","(no experience stated; owns systems end to end)","FALSE POSITIVE: nothing says entry-level; AI said fresher-friendly at 0.80 confidence"),
+ 20: ("FIT","Y","Y","Y","Y","Y","Y","0-1 years in software development",""),
+ 21: ("NOT","Y","Y","Y","Y","Y","Y","5-7 years in business analytics",""),
+ 22: ("NOT","Y","Y","Y","Y","Y","Y","5 to 8 yrs in portfolio risk management",""),
+ 23: ("NOT","Y","Y","Y","Y","Y","Y","4-7 years in growth, lifecycle",""),
+ 24: ("NOT","Y","Y","Y","Y","Y","Y","Experience : 4 -8 yrs",""),
+ 25: ("NOT","Y","Y","Y","Y","Y","Y","Qualified LLB with 5-7 years of PQE",""),
+ 26: ("NOT","Y","Y","Y","Y","Y","Y","10 years in total, with 5+ in core employer branding",""),
+ 27: ("NOT","Y","Y","Y","Y","Y","Y","8+ years in support leadership",""),
+ 28: ("NOT","Y","Y","Y","Y","Y","Y","4+ years running production database infrastructure",""),
+ 29: ("FIT","Y","Y","Y","Y","Y","Y","1+ years' experience in customer support","MISSED (hidden): rules said eligible, AI disagreed at 0.95 and demoted it. Right on a strict reading"),
+ 30: ("UNCLEAR","Y","Y","Y","Y","Y","Y","(experience not stated)",""),
+ 31: ("FIT","Y","Y","Y","Y","Y","Y","Minimum of one year of experience in Health Insurance; prior Direct Sales mandatory","MISSED (hidden): min 1 year fits the definition; AI said not fresher-friendly. Right on a strict reading"),
+ 32: ("NOT","Y","Y","Y","Y","Y","Y","2-5 years of experience in Talent Acquisition",""),
+ 33: ("NOT","Y","Y","Y","Y","Y","Y","Substantial experience selling identity security",""),
+ 34: ("NOT","Y","Y","Y","Y","Y","Y","2+ years of relevant work experience",""),
+ 35: ("NOT","Y","Y","Y","Y","Y","Y","2-5 years of experience; prior experience in a product role preferred",""),
+ 36: ("NOT","Y","Y","Y","Y","Y","-","More than 8 years of relevant experience",""),
+ 37: ("NOT","Y","U","Y","Y","Y","-","8-10 years of post-qualification experience",""),
+ 38: ("NOT","Y","Y","Y","Y","Y","-","8+ years of experience in software development",""),
+ 39: ("NOT","Y","U","N","Y","Y","-","6+ years of experience leading technical pre-sales ... flexible hybrid work model","Hybrid, tagged onsite"),
+ 40: ("NOT","N","U","Y","N","Y","-","6+years of experience in a similar role","Category should be Finance; city Gurugram is only in the title, so no city tagged"),
+ 41: ("NOT","Y","U","Y","Y","Y","-","Typically 7+ years of experience",""),
+ 42: ("NOT","N","U","Y","Y","Y","-","6+ years of production level experience in Java, Scala, Python","Software engineering role; 'Data' in title picked Data & AI"),
+ 43: ("NOT","Y","U","N","Y","Y","-","Senior Software Engineer ... #LI-HYBRID","Hybrid, tagged onsite"),
+ 44: ("NOT","Y","U","Y","Y","Y","-","4-7 years in Talent Management",""),
+ 45: ("NOT","Y","U","Y","Y","Y","-","At least 5 years of experience",""),
+ 46: ("NOT","Y","U","Y","Y","Y","-","3+ years of experience in designing, developing and testing","Decision right, reason wrong: 'Member of Technical Staff' matched the 'staff' senior rule"),
+ 47: ("NOT","Y","U","Y","Y","Y","-","Minimum 8-12 years of experience",""),
+ 48: ("NOT","Y","U","N","Y","Y","-","4-7 years ... This is a Hybrid role based out of our Mohali Office","Hybrid, tagged onsite"),
+ 49: ("NOT","N","U","N","Y","N","-","7-10 years creating technical learning content; 3-5 years training delivery","Category: training content, not software; hybrid tagged onsite; parser took 3-5 instead of 7-10"),
+ 50: ("NOT","N","Y","Y","Y","Y","-","10+ years selling platform-as-a-service","Category should be Sales & Marketing ('Account Director' not in the rule)"),
+}
