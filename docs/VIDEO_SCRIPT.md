@@ -1,13 +1,13 @@
 # Loom script (max 5 min, face + screen)
 
 Times are targets. Talk to the points below; don't read them out. Have these open in tabs before you start:
-http://localhost:3000, http://localhost:8000/docs, README.md (architecture diagram), the sheet, VS Code.
+https://risefirst.vercel.app, https://risefirst-api.onrender.com/docs, README.md (architecture diagram), the sheet, VS Code.
 
 ---
 
 ## 0:00 – 0:30 · What it is
 
-**Screen:** http://localhost:3000
+**Screen:** https://risefirst.vercel.app
 
 - "RiseFirst lists fresher jobs and internships in India, refreshed daily, straight from employers' own job boards."
 - "Every listing says *why* it's listed and whether rules or AI made the call." Hover one **AI decision** badge.
@@ -22,11 +22,12 @@ http://localhost:3000, http://localhost:8000/docs, README.md (architecture diagr
 - **Rules first, AI second.** The rules decide 80% of jobs for free (senior title or 3+ years → reject; intern, trainee or 0–1 years → publish). Only the uncertain middle goes to Gemini.
 - **AI has bounded power.** Gemini returns a fixed JSON schema that we validate again. It can settle a "needs review" job only at confidence ≥ 0.7, and it can never un-reject a job. Job text sits inside `<posting>` tags as untrusted data, so a prompt injection can only produce wrong field values, never actions.
 - Clean architecture: `domain` holds pure rules, `application` holds use cases and ports, and `infrastructure` holds the Gemini, ATS and Postgres adapters. Swapping the model means writing one file, `llm/gemini.py`.
-- Daily: the worker runs at 06:00 IST. Jobs whose text hasn't changed reuse the stored AI result, so a daily refresh costs almost nothing. Jobs missing for 2 runs are closed.
+- Hosting: Vercel (site) → Render (API) → Neon (Postgres), all in Singapore; a GitHub Actions job refreshes daily at 06:00 IST.
+- Caching: Jobs whose text hasn't changed reuse the stored AI result, so a daily refresh costs almost nothing. Jobs missing for 2 runs are closed.
 
 ## 1:45 – 3:15 · What broke and how I fixed it
 
-**Screen:** `docker compose logs worker`, then the `ingestion_runs` reports in the sheet ("Pipeline runs" tab)
+**Screen:** GitHub Actions run log (Daily refresh), then the `ingestion_runs` reports in the sheet ("Pipeline runs" tab)
 
 1. **The free-tier quota killed the first AI run.** Run 2 made 297 Gemini calls and **287 failed**: `gemini-3.5-flash` allows 5 requests a minute and 20 a day. The run hammered the API with 4 threads and logged hundreds of errors.
    **Fix:** calls are paced to the per-minute limit. 429 and 503 errors retry after the wait Google suggests. When the daily quota runs out, AI pauses for the rest of the run, and the job is still saved on rules and retried tomorrow. Results are cached by content hash. Run 3 shows it working: 10 cache hits, one clean pause, 283 jobs deferred instead of failed. Then I moved to `gemini-3.5-flash-lite`, which has its own quota.
@@ -48,5 +49,4 @@ http://localhost:3000, http://localhost:8000/docs, README.md (architecture diagr
 
 - Fix the work-mode priority bug the eval found, and require a stated experience signal before AI can publish.
 - Add the Adzuna API to reach 200+ listings. It's one new connector file.
-- Deploy: API and worker on a container host, Postgres on Neon, the site on Vercel.
 - "Repo, sheet and prompts are linked in the submission. Thanks."

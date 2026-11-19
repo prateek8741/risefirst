@@ -2,6 +2,8 @@
 
 Fresher jobs and internships in India, collected daily from employers' own job boards.
 
+**Live:** https://risefirst.vercel.app · **API docs:** https://risefirst-api.onrender.com/docs
+
 RiseFirst reads the public job-board APIs that companies publish through their hiring
 systems (Greenhouse, Lever, Ashby). It keeps only jobs located in India and decides which
 ones suit freshers (0–1 years of experience). It can use Gemini to tag jobs, then serves
