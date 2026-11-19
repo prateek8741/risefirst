@@ -1,13 +1,13 @@
 # Loom script (max 5 min, face + screen)
 
 Times are targets. Talk to the points below; don't read them out. Have these open in tabs before you start:
-https://risefirst.vercel.app, https://risefirst-api.onrender.com/docs, README.md (architecture diagram), the sheet, VS Code.
+https://risefirst-beta.vercel.app, https://risefirst-api.onrender.com/docs, README.md (architecture diagram), the sheet, VS Code.
 
 ---
 
 ## 0:00 – 0:30 · What it is
 
-**Screen:** https://risefirst.vercel.app
+**Screen:** https://risefirst-beta.vercel.app
 
 - "RiseFirst lists fresher jobs and internships in India, refreshed daily, straight from employers' own job boards."
 - "Every listing says *why* it's listed and whether rules or AI made the call." Hover one **AI decision** badge.
