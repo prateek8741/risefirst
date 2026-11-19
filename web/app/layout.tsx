@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import Link from "next/link";
+// Fonts are bundled from npm rather than fetched from Google at build time, so builds never depend on
+// fonts.googleapis.com (a Google Fonts hiccup once failed a Vercel build) and visitors' browsers never contact Google.
+import "@fontsource/ibm-plex-sans/latin-400.css";
+import "@fontsource/ibm-plex-sans/latin-500.css";
+import "@fontsource/ibm-plex-sans/latin-600.css";
+import "@fontsource/ibm-plex-sans/latin-700.css";
+import "@fontsource/ibm-plex-mono/latin-400.css";
+import "@fontsource/ibm-plex-mono/latin-500.css";
 import "./globals.css";
-
-const plexSans = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-plex-sans" });
-const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-plex-mono" });
 
 export const metadata: Metadata = {
   title: { default: "RiseFirst — Fresher jobs & internships in India", template: "%s · RiseFirst" },
@@ -25,7 +29,7 @@ function Logo() {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-IN" className={`${plexSans.variable} ${plexMono.variable}`}>
+    <html lang="en-IN">
       <body className="flex min-h-screen flex-col antialiased">
         <header className="sticky top-0 z-20 border-b border-line bg-paper/90 backdrop-blur">
           <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2.5">
